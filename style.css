@@ -870,3 +870,874 @@ text-decoration: underline;
     }
 }
 
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.navBar{
+    font-family: 'David Libre', serif;
+    width: 100%;
+    position: fixed;
+    padding: 30px 0;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+.navBar.sticky{
+    padding: 15px 0;
+    background-color: brown;
+}
+
+.maxWidth{
+max-width: 1300px;
+padding: 0px 80px;
+margin: auto;
+}
+
+.navBar .menu li a{
+    color: black;
+    margin-left: 25px;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navBar .menu li a:hover{
+    color: crimson;
+}
+
+.navBar .maxWidth{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navBar .menu li{
+display: inline-block;
+list-style: none;
+}
+
+.navBar .logo a{
+color: black;
+font-size: 35px;
+font-weight: 600;
+text-decoration: none;
+}
+
+.navBar .logo a span{
+    color: crimson;
+}
+
+.navBar.sticky .logo a span{
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.navBar.sticky .menu li a:hover{
+    color: black;
+}
+
+/*menu btn styling*/
+.menu-btn{
+    color: purple;
+    cursor: pointer;
+    font-size: 23px;
+    display: none;
+}
+
+.menu-btn i.active:before{
+    content: "\f00d";
+}
+
+.scrollUp{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: crimson;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: black ;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.scrollUp .show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/*home section*/
+
+.home{
+    display: flex;
+    background: url("images/img10") no-repeat center;
+    height: 100vh;
+    min-height: 500px;
+    color: white;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family:'David Libre', serif ;
+}
+
+.home .maxWidth{
+    margin: auto 0 auto 40px;
+}
+
+.home .mainContent .text1{
+font-size: 30px;
+}
+
+.home .mainContent .text2{
+    font-size: 70px;
+    margin-left: -3px;
+    font-weight: 600;
+}
+
+.home .mainContent .text3{
+    font-size: 45px;
+    margin: 5px 0;
+}
+
+
+.home .mainContent .text3 span{
+    color: crimson;
+    font-weight: 600;
+}
+
+.home .mainContent a{
+    font-size: 25px;
+    display: inline-block;
+    background-color: crimson;
+    padding: 12px 36px;
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid black;
+    transition: all 0.3s ease;
+}
+
+.home .mainContent a:hover{
+ color: black;
+ background: none;
+}
+
+/*section style, all same*/
+.about, .jobExperiences, .skills, .activities, .contact, footer{
+    font-family:'David Libre', serif ;
+}
+
+section{
+    padding: 100px 0;
+}
+
+section .title{
+    font-family: 'Abril Fatface', cursive;
+    position: relative;
+    margin-bottom: 60px;
+    font-size: 40px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-weight: 500;
+}
+
+section .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    height: 3px;
+    width: 180px;
+    transform: translateX(-50%);
+    background: black;
+}
+
+section .title::after{
+    position: absolute;
+    bottom: -12px;
+    left: 50%;  
+    font-size: 20px;
+    padding: 5px;
+    background: white;
+    color: crimson;
+    transform: translateX(-50%);
+}
+
+
+/* about style*/
+
+.about .title::after{
+    content: "who I am";
+}
+
+.about .aboutContent, .jobExperiences .jobExperiencesContent, .skills .skillsContent, .activities .activitiesContent, .contact .contactContent{
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: space-between;
+}
+
+.about .aboutContent .left{
+    width: 45%;
+}
+
+.about .aboutContent .left img{
+    height: 450px;
+    width: 450px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.about .aboutContent .right{
+margin: 30px 0px;
+width: 55%;
+}
+
+.about .aboutContent .right .text4,.about .aboutContent .right p{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    color: black;
+}
+
+.about .aboutContent .right .text4 span{
+    color: crimson;
+}
+
+.about .aboutContent .right a{
+    font-size: 20px;
+    font-weight: 500;
+    display: inline-block;
+    background-color: crimson;
+    padding: 10px 30px;
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid black;
+    transition: all 0.3s ease;
+}
+
+.about .aboutContent .right a:hover{
+    color: black;
+    background: none
+}
+    
+.resume{
+    text-decoration: none;
+}
+
+/*experiences*/
+
+.jobExperiences{
+    background: black;
+    color: white;
+}
+
+.jobExperiences  .title::before{
+    background: white; 
+    width: 480px;
+    bottom: -9px;
+}
+
+.jobExperiences  .title::after{
+content: "what my job experiences are  ";
+background: black;
+bottom: -20px;
+}
+
+.jobExperiences .text5, p{
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    margin: 10px 10px;
+}
+.jobExperiences .jobExperiencesContent .card{
+    width: calc(55% - 150px);
+    text-align: center;
+    padding: 20px 25px;
+    background: #222;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.jobExperiences .jobExperiencesContent .card:hover{
+background: crimson;
+}
+
+.jobExperiences .jobExperiencesContent .card .box{
+    transition: all 0.3s ease;
+}
+
+.jobExperiences .jobExperiencesContent .card:hover .box{
+    transform: scale(1.05);
+}
+
+.jobExperiences .jobExperiencesContent .card i{
+    color: crimson;
+    font-size: 40px;
+    margin: 10px 10px;
+    transition: color 0.3s ease;
+}
+
+.jobExperiences .jobExperiencesContent .card:hover i{
+ color: white;
+}
+
+.jobExperiences .jobExperiencesContent .card .text5{
+    font-size: 40px;
+    color: white;
+}
+
+/*skills style*/
+.skills .skillsContent .left .text6{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.skills .skillsContent .left div {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 25px;
+}
+.skills .skillsContent .left p{
+    font-size: 20px;
+    font-weight: 500;
+    color: #222;
+    text-align: justify;
+    margin: 25px;
+}
+
+.skills .skillsContent .left span{
+    margin: 10px;
+    text-align: center;
+ 
+}
+
+.skills .title::after{
+    content: "what I know and what I have";
+    bottom: -25px;
+
+}
+.skills  .title::before{
+    background: black; 
+    width: 480px;
+    bottom: -10px;
+}
+
+.skills .skillsContent .column{
+    width: 100%;
+}
+
+.skills .skillsContent .bars{
+    margin: 20px;
+}
+ 
+.skills .skillsContent .info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px auto;
+}
+
+.skills .skillsContent .info .language{
+    font-size: 80px;
+}
+.skills .skillsContent a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    display: inline-block;
+    background-color: white;
+    padding: 6px 15px;
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 2px solid black;
+    transition: all 0.3s ease;
+}
+
+.skills .skillsContent a:hover{
+    color: black;
+    background: white;
+}
+
+.skills .skillsContent .left .line{
+    height: 5px;
+    width: 100%;
+    background: white;
+    position: relative;
+}
+
+.skills .skillsContent .left .html::before{
+content: "";
+position: absolute;
+height: 100%;
+width: 80%;
+left: 0;
+top: 0;
+background: black;
+}
+
+.skills .skillsContent .left .css::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 75%;
+    left: 0;
+    top: 0;
+    background: black;
+}
+
+.skills .skillsContent .left .jss::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 65%;
+    left: 0;
+    top: 0;
+    background: black;
+}
+
+.skills .skillsContent .card{
+    width: 100%;    
+    padding: 20px 25px;
+    background: darkgray;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.skills .skillsContent .card:hover{
+background: crimson;
+}
+
+.skills .skillsContent .card .box{
+    transition: all 0.3s ease;
+}
+
+.skills .skillsContent .card:hover .box{
+    transform: scale(1.05);
+}
+
+.skills .skillsContent .card i{
+    color: crimson;
+    font-size: 40px;
+    margin: 10px 10px;
+    transition: color 0.3s ease;
+}
+
+.skills .skillsContent .card:hover i{
+ color: white;
+}
+
+/*activites style*/
+.activities{
+    background: black;
+}
+
+.activities .title{
+    color: white;
+}
+
+.activities  .title::before{
+    background: white;
+    width: 480px;
+    bottom: -9px;
+}
+
+.activities  .title::after{
+content: "what I did  ";
+background: black;
+bottom: -20px;
+
+}
+
+.activities .text7, .activities p, .activities span{
+    color: green;
+    font-weight: 500;
+    font-size: 20px;
+    margin: 10px 10px;
+}
+.activities .activitiesContent .card{
+    width: calc(55% - 100px);
+    text-align: center;
+    padding: 20px 25px;
+    background: #222;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.activities .activitiesContent .card:hover{
+background: yellow;
+}
+
+.activities .activitiesContent .card .box{
+    transition: all 0.3s ease;
+}
+
+.activities .activitiesContent .card:hover .box{
+    transform: scale(1.05);
+}
+
+.activities .activitiesContent .card i{
+    color: crimson;
+    font-size: 40px;
+    margin: 10px 10px;
+    transition: color 0.3s ease;
+}
+
+.activities .activitiesContent .card:hover i{
+ color: white;
+}
+
+.activities .activitiesContent .card .text5{
+    font-size: 40px;
+    color: white;
+}
+.activities .activitiesContent a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    display: inline-block;
+    background-color: orangered;
+    padding: 2px 8px;
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 2px solid black;
+    transition: all 0.3s ease;
+}
+
+/*contact*/
+
+.contact .title::after{
+    content: "get in touch"
+} 
+.contact .contactContent .column{
+    width: calc(50% - 30px);
+}
+.contact .contactContent .left p{
+    color: crimson;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: justify;
+}
+.contact .contactContent .left .icons{
+    margin: 10px 0;
+}
+.contact .contactContent .row{
+    display:flex;
+    align-items: center;
+}
+.contact .contactContent .row .info{
+    margin: 15px auto;
+}
+.contact .contactContent .row i{
+    font-size: 20px;
+    color: crimson;
+}
+.contact .contactContent .text8{
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+}
+.contact .contactContent .head {
+    color: grey;
+    font-size: 20px;
+    font-weight: 600;
+}
+.contact .contactContent .subtitle{
+    color: black;
+    font-size: 20px;
+}
+.contact .contactContent .info .social{
+    color: grey;
+    font-size: 20px;
+    font-weight: 600;
+}
+.contact .contactContent .info a{
+    text-decoration: none;
+    
+}
+.contact .contactContent .info i{
+    font-size: 20px;
+    color: crimson;
+    margin: 15px auto;
+}
+
+.contact .right form .fields{
+    display: flex;
+}
+
+.contact .right form .field, .contact .right form .fields .field{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.contact .right form .name{
+    margin-right: 10px;
+}
+.contact .right form .email{
+    margin-left: 10px;
+}
+.contact .right form .textArea{
+    height: 80px;
+    width: 100%;
+}
+.contact .right form .field input, .contact .right form .textArea textarea{
+    height: 100%;
+    width: 100%;
+    border-radius: 6px;
+    outline: 0px;
+    border: 1px solid lightgrey;
+    padding: 0px 15px;
+    font: 17px;
+}
+.contact .right form .textArea textarea{
+    padding-top: 10px;
+    resize: none;
+}
+.contact .right form .button{
+height: 47px;
+width: 170px;
+}
+.contact .right form .button button{
+height: 100%;
+width: 100%;
+border: 2px solid black;
+background:crimson ;
+color: white;
+border-radius: 6px;
+font-weight: 500;
+cursor: pointer;
+transition: all 0.3s ease;
+}
+
+.contact .right form .button button:hover{
+    color: crimson;
+    background: none;
+}
+
+/* footer style*/
+
+footer{
+    background: black;
+    color: white;
+    padding: 20px 25px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+footer span a{
+    color :crimson;
+    text-decoration: none;
+}
+
+footer span a:hover{
+    color :crimson;
+text-decoration: underline;
+}
+
+/*responsive*/
+@media(max-width: 1300px){
+    .home .maxWidth{
+        margin-left: 0px
+    }
+ }
+@media(max-width: 1104px){
+    .about .aboutContent .left img{
+        height: 300px;
+        width: 300px;
+      
+    }    
+ }
+@media(max-width: 991px){
+    .maxWidth{
+        padding: 0px 50px;
+    }
+}
+@media(max-width: 947px){
+    .maxWidth{
+        padding: 0px 50px;
+        }
+    .menu-btn{
+         display: block;
+         z-index: 999;
+        }
+        
+    .navBar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: black;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+        }
+
+    .navBar .menu.active{
+        left: 0;
+    }
+    .navBar .menu li{
+        display: block;
+    }
+    .navBar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+        color: purple;
+    }
+    .home .mainContent .text2{
+        font-size: 60px;
+    }
+
+    .home .mainContent .text3{
+        font-size: 32px;
+    }
+    .home .mainContent a{
+        font-size: 23px;
+        padding: 10px 30px ;
+    }
+    .maxWidth{
+        max-width: 800px;
+        }
+    .about .aboutContent .column{
+        width: 100%;
+    }
+    .about .aboutContent .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px ;
+    }
+    .about .aboutContent .right{
+        flex: 100%;
+    }
+    .jobExperiences .jobExperiencesContent .card, .activities .activitiesContent .card{
+        margin-bottom: 20px;
+        width: calc(50% - 10px);      
+    }
+    .skills .skillsContent .column, .contact .contactContent .column, .activities .activitiesContent .column{
+        width: 100%;
+        margin-bottom: 35px;
+    }
+    
+.jobExperiences .title::after{
+    content: "what my job experiences are  ";
+    background: black;
+    bottom: -48px;
+    }
+
+    .jobExperiences .title::before{
+        background: white; 
+        width: 400px;
+        bottom: -9px;
+    }
+    .skills .title::after{
+        content: "what I know and what I have";
+        bottom: -20px;
+    
+    }
+    .skills  .title::before{
+        background: black; 
+        width: 480px;
+        bottom: -10px;
+    }
+   
+}
+
+@media(max-width: 690px){
+    .home .mainContent .text2{
+        font-size: 50px;
+    }
+
+    .home .mainContent .text3{
+        font-size: 27px;
+    }
+    .home .mainContent a{
+        font-size: 20px;
+        padding: 8px 20px ;
+    }
+    .jobExperiences .jobExperiencesContent .card{
+        width: 100%     
+    }
+    .skills .title::after{
+        content: "what I know and what I have";
+        bottom: -20px;
+        
+    }
+    .skills  .title::before{
+        background: black; 
+        width: 480px;
+        bottom: -10px;
+    }
+    .skills .skillsContent .card{
+        width: 100%     
+    }
+
+}
+
+@media(max-width: 654px){
+    .home .mainContent .text2{
+        font-size: 40px;
+    }
+
+    .home .mainContent .text3{
+        font-size: 22px;
+    }
+    .skills .title::after{
+        content: "what I know and what I have";
+        bottom: -50px;
+        
+    }
+    .skills  .title::before{
+        background: black; 
+        width: 480px;
+        bottom: -10px;
+    }
+    .skills .skillsContent .info p{
+        font-size: 20px;
+        font-weight: 500;
+        color: #222;
+        margin: 25px;
+    }
+    
+    .skills .skillsContent .left .info span{
+        margin: 10px;
+        bottom: 100px;
+    }
+    .skills .skillsContent .left .info a{
+        padding: 3px 10px;
+        font-size: 20px;
+    }
+    .skills .skillsContent .card{
+        width: 100%     
+    }
+}
