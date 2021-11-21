@@ -1568,6 +1568,9 @@ text-decoration: underline;
 @media(max-width: 1300px){
     .home .maxWidth{
         margin: 0px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
     }
  }
 @media(max-width: 1104px){
