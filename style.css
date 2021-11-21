@@ -1564,3 +1564,180 @@ footer span a:hover{
 text-decoration: underline;
 }
 
+/*responsive*/
+@media(max-width: 1300px){
+    .home .maxWidth{
+        margin: 0px;
+    }
+ }
+@media(max-width: 1104px){
+    .about .aboutContent .left img{
+        height: 300px;
+        width: 300px;
+      
+    }    
+ }
+@media(max-width: 991px){
+    .maxWidth{
+        padding: 0px 50px;
+    }
+}
+@media(max-width: 947px){
+    .maxWidth{
+        padding: 0px 50px;
+        }
+    .menu-btn{
+         display: block;
+         z-index: 999;
+        }
+        
+    .navBar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: black;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+        }
+
+    .navBar .menu.active{
+        left: 0;
+    }
+    .navBar .menu li{
+        display: block;
+    }
+    .navBar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+        color: purple;
+    }
+    .home .mainContent .text2{
+        font-size: 60px;
+    }
+
+    .home .mainContent .text3{
+        font-size: 32px;
+    }
+    .home .mainContent a{
+        font-size: 23px;
+        padding: 10px 30px ;
+    }
+    .maxWidth{
+        max-width: 800px;
+        }
+    .about .aboutContent .column{
+        width: 100%;
+    }
+    .about .aboutContent .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px ;
+    }
+    .about .aboutContent .right{
+        flex: 100%;
+    }
+    .jobExperiences .jobExperiencesContent .card, .activities .activitiesContent .card{
+        margin-bottom: 20px;
+        width: calc(50% - 10px);      
+    }
+    .skills .skillsContent .column, .contact .contactContent .column, .activities .activitiesContent .column{
+        width: 100%;
+        margin-bottom: 35px;
+    }
+    
+.jobExperiences .title::after{
+    content: "what my job experiences are  ";
+    background: black;
+    bottom: -48px;
+    }
+
+    .jobExperiences .title::before{
+        background: white; 
+        width: 400px;
+        bottom: -9px;
+    }
+    .skills .title::after{
+        content: "what I know and what I have";
+        bottom: -20px;
+    
+    }
+    .skills  .title::before{
+        background: black; 
+        width: 480px;
+        bottom: -10px;
+    }
+   
+}
+
+@media(max-width: 690px){
+    .home .mainContent .text2{
+        font-size: 50px;
+    }
+
+    .home .mainContent .text3{
+        font-size: 27px;
+    }
+    .home .mainContent a{
+        font-size: 20px;
+        padding: 8px 20px ;
+    }
+    .jobExperiences .jobExperiencesContent .card{
+        width: 100%     
+    }
+    .skills .title::after{
+        content: "what I know and what I have";
+        bottom: -20px;
+        
+    }
+    .skills  .title::before{
+        background: black; 
+        width: 480px;
+        bottom: -10px;
+    }
+    .skills .skillsContent .card{
+        width: 100%     
+    }
+
+}
+
+@media(max-width: 654px){
+    .home .mainContent .text2{
+        font-size: 40px;
+    }
+
+    .home .mainContent .text3{
+        font-size: 22px;
+    }
+    .skills .title::after{
+        content: "what I know and what I have";
+        bottom: -50px;
+        
+    }
+    .skills  .title::before{
+        background: black; 
+        width: 480px;
+        bottom: -10px;
+    }
+    .skills .skillsContent .info p{
+        font-size: 20px;
+        font-weight: 500;
+        color: #222;
+        margin: 25px;
+    }
+    
+    .skills .skillsContent .left .info span{
+        margin: 10px;
+        bottom: 100px;
+    }
+    .skills .skillsContent .left .info a{
+        padding: 3px 10px;
+        font-size: 20px;
+    }
+    .skills .skillsContent .card{
+        width: 100%     
+    }
+}
