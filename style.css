@@ -694,8 +694,12 @@ text-decoration: underline;
 
 /*responsive*/
 @media(max-width: 1300px){
+    body{
+        justify-content: space-between ;
+    }
     .home .maxWidth{
-        margin-left: 0px
+        margin: 0px;
+        padding: 0px;
     }
  }
 @media(max-width: 1104px){
@@ -1381,7 +1385,7 @@ bottom: -20px;
 }
 .activities .activitiesContent .card{
     width: calc(55% - 100px);
-    text-align: center;
+    text-align: justify;
     padding: 20px 25px;
     background: #222;
     cursor: pointer;
@@ -1407,6 +1411,12 @@ background: yellow;
     font-size: 40px;
     margin: 10px 10px;
     transition: color 0.3s ease;
+}
+.activities .activitiesContent .card div{
+    color: green;
+    font-weight: 500;
+    font-size: 20px;
+    margin: 10px 10px;
 }
 
 .activities .activitiesContent .card:hover i{
@@ -1449,6 +1459,9 @@ background: yellow;
 }
 .contact .contactContent .left .icons{
     margin: 10px 0;
+}
+.contact .contactContent .left .row .info{
+    margin-left: 0px;
 }
 .contact .contactContent .row{
     display:flex;
@@ -1562,13 +1575,12 @@ footer span a{
 footer span a:hover{
     color :crimson;
 text-decoration: underline;
-}
+}   
 
 /*responsive*/
 @media(max-width: 1300px){
     .home .maxWidth{
-        margin: 0px;
-        text-align: justify;
+        margin: 0px 
     }
  }
 @media(max-width: 1104px){
