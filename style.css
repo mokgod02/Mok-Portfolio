@@ -1225,7 +1225,6 @@ background: crimson;
     font-size: 20px;
     font-weight: 500;
     color: #222;
-    text-align: justify;
     margin: 25px;
 }
 
@@ -1753,4 +1752,15 @@ text-decoration: underline;
     .skills .skillsContent .card{
         width: 100%     
     }
+        @media(max-width: 480px){
+        .activities .activitiesContent .card p, .activities .activitiesContent .card span, .activities .activitiesContent .card a{
+            font-size: 15px;
+            text-align: left;
+        }
+        .skills .skillsContent .card .info a, .skills .skillsContent .card .info span, .skills .skillsContent .box p{
+            text-align: left;
+            font-size: 20px;
+        }
+
+        }
 }
