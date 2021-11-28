@@ -1,4 +1,3 @@
-
 $(document).ready(function(){
     $(window).scroll(function(){
         if(this.scrollY > 20){
@@ -6,21 +5,25 @@ $(document).ready(function(){
         }else{
             $('.navBar').removeClass("sticky");
         }
-        if(this.scrollY > 500){
-            $('.scrollUp').addClass("show");
+        if(this.scrollY > 400){
+            $('.scroll-up-btn').addClass("show");
         }else{
-            $('.scrollUp').removeClass("show");
+            $('..scroll-up-btn').removeClass("show");
         }
     });
 
-    $('.scrollUp').click(function(){
+    $('.scroll-up-btn').click(function(){
         $('html').animate({scrollTop : 0});
+        $('html').css({"scrollBehavior" : "auto"});  
+    });
+    $('.navbar .menu li a').click(function(){
+        $('html').css("scrollBehavior", "smooth");
     });
 
 
     //toggle menu/navbar script
     $('.menu-btn').click(function(){
-$('.navBar .menu').toggleClass("active");
-$('.menu-btn i').toggleClass("active");
-    });
-});
+        $('.navBar .menu').toggleClass("active");
+        $('.menu-btn i').toggleClass("active");
+        });
+}); 
