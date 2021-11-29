@@ -13,6 +13,7 @@
     text-decoration: none;
     transition: all 0.3s ease;
     z-index: 999;
+    
 }
 
 .navBar.sticky{
@@ -67,8 +68,12 @@ text-decoration: none;
 }
 
 .navBar.sticky .menu li a{
-    color: black;
-    font-size: 25px;
+    color: white;
+}
+
+.navBar.sticky .menu li a:hover{
+    cursor: pointer;
+    color: #222;
 }
 
 .alert{
@@ -155,17 +160,20 @@ text-decoration: none;
 
 .home .mainContent .text1{
 font-size: 30px;
+color: black;
 }
 
 .home .mainContent .text2{
     font-size: 70px;
     margin-left: -3px;
     font-weight: 600;
+    color: black
 }
 
 .home .mainContent .text3{
     font-size: 45px;
     margin: 5px 0;
+    color: black
 }
 
 
@@ -389,7 +397,7 @@ background: crimson;
 }
 
 .skills .title::after{
-    content: "what I know and what I have";
+    content: "what I have";
     bottom: -25px;
 
 }
@@ -727,8 +735,8 @@ text-decoration: underline;
     .about .aboutContent .left img{
         height: 100%;
         width: 100%;
-      
     }    
+
  }
 @media(max-width: 991px){
     .maxWidth{
@@ -742,6 +750,10 @@ text-decoration: underline;
     .menu-btn{
          display: block;
          z-index: 999;
+        }
+        .menu{
+            display: flex;
+            flex-direction: column;
         }
         
     .navBar .menu{
@@ -865,8 +877,11 @@ text-decoration: underline;
     .home .mainContent .text3{
         font-size: 22px;
     }
+    .activities .activitiesContent .card{
+        width: 100%;
+    }
     .skills .title::after{
-        content: "what I know and what I have";
+        content: "what I have";
         bottom: -50px;
         
     }
@@ -895,16 +910,28 @@ text-decoration: underline;
     }
     }
 @media(max-width: 480px){
-    .activities .activitiesContent .card p, .activities .activitiesContent .card span, .activities .activitiesContent .card a{
-        font-size: 15px;
-        text-align: left;
-        padding: 5;
+    html{
+        overflow-x: hidden;
     }
-    .skills .skillsContent .card .info a, .skills .skillsContent .card .info span, .skills .skillsContent .box p{
-        text-align: left;
-        font-size: 20px;
+    section{
+        padding: 50px 10px;
     }
+    .menu{
+        display: flex;
+        flex-direction: column;
     }
-
-
-        
+    .navBar{
+        padding: 20px 30px;
+    }
+    .navBar.sticky{
+        padding: 20px 30px;
+    }
+    .maxWidth{
+        padding: 0;
+    }
+    .skills.skillsContent.left div{
+     margin: 20px 0px;
+    }
+    .skills .title::after, .jobExperiences .title::after, .contact.title::after, .about.title::after, .contact.title::after{
+        display: none;
+    }
