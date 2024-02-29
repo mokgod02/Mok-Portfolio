@@ -6,38 +6,37 @@
 }
 
 .navBar{
-    font-family: 'David Libre', serif;
+    font-family: "Roboto Condensed", sans-serif;
     width: 100%;
     position: fixed;
-    padding: 50px 0;
+    padding: 30px 0;
     text-decoration: none;
     transition: all 0.3s ease;
     z-index: 999;
-    
 }
 
 .navBar.sticky{
-    padding: 30px 0;
+    padding: 15px 0;
     background-color: brown;
 }
 
 .maxWidth{
 max-width: 1300px;
-padding: 0px 30px;
+padding: 0px 80px;
 margin: auto;
 }
 
 .navBar .menu li a{
-    color: crimson;
+    color: white;
     margin-left: 25px;
-    font-size: 23px;
+    font-size: 20px;
     font-weight: 500;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .navBar .menu li a:hover{
-    color: black;
+    color: crimson;
 }
 
 .navBar .maxWidth{
@@ -67,37 +66,9 @@ text-decoration: none;
     transition: color 0.3s ease;
 }
 
-.navBar.sticky .menu li a{
-    color: white;
-}
-
 .navBar.sticky .menu li a:hover{
-    cursor: pointer;
-    color: #222;
-}
-
-.alert{
-    padding: 5px;
-    background-color: white;
     color: black;
-    display: inline-block;
-    font-size: 15px;
-    cursor: pointer;
-    margin-left: 10px;
 }
-.closebtn{
-    margin-left: 10px;
-    color: black;
-    font-weight: bold;
-    float: right;
-    font-size: 35px;
-    line-height: 20px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-.closebtn:hover {
-    color: black;
-  }
 
 /*menu btn styling*/
 .menu-btn{
@@ -145,13 +116,13 @@ text-decoration: none;
 
 .home{
     display: flex;
-    background: url("images/img10") no-repeat center;
+    background-image: url(images/jaja.png);
     height: 100vh;
     min-height: 500px;
     color: white;
     background-attachment: fixed;
     background-size: cover;
-    font-family:'David Libre', serif ;
+    font-family:"Roboto Condensed", sans-serif ;
 }
 
 .home .maxWidth{
@@ -160,20 +131,17 @@ text-decoration: none;
 
 .home .mainContent .text1{
 font-size: 30px;
-color: black;
 }
 
 .home .mainContent .text2{
     font-size: 70px;
     margin-left: -3px;
     font-weight: 600;
-    color: black
 }
 
 .home .mainContent .text3{
-    font-size: 45px;
+    font-size: 30px;
     margin: 5px 0;
-    color: black
 }
 
 
@@ -203,7 +171,7 @@ color: black;
 
 /*section style, all same*/
 .about, .jobExperiences, .skills, .activities, .contact, footer{
-    font-family:'David Libre', serif ;
+    font-family:"Roboto Condensed", sans-serif ;
 }
 
 section{
@@ -211,7 +179,7 @@ section{
 }
 
 section .title{
-    font-family: 'Abril Fatface', cursive;
+    font-family:"Roboto Condensed", sans-serif ;
     position: relative;
     margin-bottom: 60px;
     font-size: 40px;
@@ -246,7 +214,8 @@ section .title::after{
 /* about style*/
 
 .about .title::after{
-    content: "who I am";
+    content: "Who I am";
+    font-family:"Roboto Condensed", sans-serif ;
 }
 
 .about .aboutContent, .jobExperiences .jobExperiencesContent, .skills .skillsContent, .activities .activitiesContent, .contact .contactContent{
@@ -261,7 +230,7 @@ justify-content: space-between;
 }
 
 .about .aboutContent .left img{
-    height: 450px;
+    height: 550px;
     width: 450px;
     object-fit: cover;
     border-radius: 6px;
@@ -322,7 +291,7 @@ width: 55%;
 }
 
 .jobExperiences  .title::after{
-content: "what my job experiences are  ";
+content: "What my job experiences are  ";
 background: black;
 bottom: -20px;
 }
@@ -341,7 +310,9 @@ bottom: -20px;
     cursor: pointer;
     border-radius: 6px;
     transition: all 0.3s ease;
+    margin-bottom: 30px;
 }
+
 
 .jobExperiences .jobExperiencesContent .card:hover{
 background: crimson;
@@ -349,6 +320,7 @@ background: crimson;
 
 .jobExperiences .jobExperiencesContent .card .box{
     transition: all 0.3s ease;
+    border-top: 20px;
 }
 
 .jobExperiences .jobExperiencesContent .card:hover .box{
@@ -373,17 +345,17 @@ background: crimson;
 
 /*skills style*/
 .skills .skillsContent .left .text6{
-    font-size: 30px;
+    font-size: 35px;
     font-weight: 500;
     margin-bottom: 10px;
 }
 .skills .skillsContent .left div {
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 500;
     margin: 25px;
 }
 .skills .skillsContent .left p{
-    font-size: 20px;
+    font-size: 23px;
     font-weight: 500;
     color: #222;
     text-align: justify;
@@ -397,7 +369,7 @@ background: crimson;
 }
 
 .skills .title::after{
-    content: "what I have";
+    content: "What I know and what I have";
     bottom: -25px;
 
 }
@@ -532,7 +504,7 @@ background: crimson;
 }
 
 .activities  .title::after{
-content: "what I did  ";
+content: "What I did  ";
 background: black;
 bottom: -20px;
 
@@ -556,7 +528,7 @@ bottom: -20px;
 }
 
 .activities .activitiesContent .card:hover{
-background: black;
+background: crimson;
 }
 
 .activities .activitiesContent .card .box{
@@ -587,7 +559,7 @@ background: black;
     font-size: 20px;
     font-weight: 500;
     display: inline-block;
-    background-color: crimson;
+    background-color: white;
     padding: 2px 8px;
     text-decoration: none;
     cursor: pointer;
@@ -601,10 +573,10 @@ background: black;
 /*contact*/
 
 .contact .title::after{
-    content: "get in touch"
+    content: "Get in touch"
 } 
 .contact .contactContent .column{
-    width: calc(50% - 30px);
+    width: calc(50% - 50px);
 }
 .contact .contactContent .left p{
     color: crimson;
@@ -735,8 +707,8 @@ text-decoration: underline;
     .about .aboutContent .left img{
         height: 100%;
         width: 100%;
+      
     }    
-
  }
 @media(max-width: 991px){
     .maxWidth{
@@ -750,10 +722,6 @@ text-decoration: underline;
     .menu-btn{
          display: block;
          z-index: 999;
-        }
-        .menu{
-            display: flex;
-            flex-direction: column;
         }
         
     .navBar .menu{
@@ -772,7 +740,7 @@ text-decoration: underline;
         left: 0;
     }
     .navBar .menu li{
-        display: inline-block;
+        display: block;
     }
     .navBar .menu li a{
         display: inline-block;
@@ -877,11 +845,8 @@ text-decoration: underline;
     .home .mainContent .text3{
         font-size: 22px;
     }
-    .activities .activitiesContent .card{
-        width: 100%;
-    }
     .skills .title::after{
-        content: "what I have";
+        content: "what I know and what I have";
         bottom: -50px;
         
     }
@@ -908,30 +873,4 @@ text-decoration: underline;
     .skills .skillsContent .card{
         width: 100%     
     }
-    }
-@media(max-width: 480px){
-    html{
-        overflow-x: hidden;
-    }
-    section{
-        padding: 50px 10px;
-    }
-    .menu{
-        display: flex;
-        flex-direction: column;
-    }
-    .navBar{
-        padding: 20px 30px;
-    }
-    .navBar.sticky{
-        padding: 20px 30px;
-    }
-    .maxWidth{
-        padding: 0;
-    }
-    .skills.skillsContent.left div{
-     margin: 20px 0px;
-    }
-    .skills .title::after, .jobExperiences .title::after, .contact.title::after, .about.title::after, .contact.title::after{
-        display: none;
     }
