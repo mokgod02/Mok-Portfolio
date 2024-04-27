@@ -320,7 +320,7 @@ background: crimson;
 
 .jobExperiences .jobExperiencesContent .card .box{
     transition: all 0.3s ease;
-    border-top: 20px;
+    border-top: 20px solid transparent;;
 }
 
 .jobExperiences .jobExperiencesContent .card:hover .box{
