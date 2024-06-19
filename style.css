@@ -116,7 +116,7 @@ text-decoration: none;
 
 .home{
     display: flex;
-    background-image: url(images/jaja.png);
+    background-image: url(images/img6.png);
     height: 100vh;
     min-height: 500px;
     color: white;
@@ -131,13 +131,14 @@ text-decoration: none;
 
 .home .mainContent .text1{
 font-size: 30px;
+margin-left: 120px;
 }
 
 .home .mainContent .text2{
     font-size: 70px;
     margin-left: -3px;
     font-weight: 600;
-}
+    margin-left: 120px;}
 
 .home .mainContent .text3{
     font-size: 30px;
@@ -170,7 +171,7 @@ font-size: 30px;
 }
 
 /*section style, all same*/
-.about, .jobExperiences, .skills, .activities, .contact, footer{
+.research-projects, .jobExperiences, .skills, .activities, .contact, footer{
     font-family:"Roboto Condensed", sans-serif ;
 }
 
@@ -211,66 +212,78 @@ section .title::after{
 }
 
 
-/* about style*/
 
-.about .title::after{
-    content: "Who I am";
-    font-family:"Roboto Condensed", sans-serif ;
-}
+/* Research and Projects Section */
 
-.about .aboutContent, .jobExperiences .jobExperiencesContent, .skills .skillsContent, .activities .activitiesContent, .contact .contactContent{
-display: flex;
-flex-wrap: wrap;
-align-items:center;
-justify-content: space-between;
-}
+.research-projects .research-projects-content, .jobExperiences .jobExperiencesContent, .skills .skillsContent, .activities .activitiesContent, .contact .contactContent{
+    display: flex;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content: space-between;
+    }
 
-.about .aboutContent .left{
-    width: 45%;
-}
+    .research-projects .title::before{
+        background: crimson; 
+        width: 480px;
+        bottom: -9px;
+    }
 
-.about .aboutContent .left img{
-    height: 550px;
-    width: 450px;
-    object-fit: cover;
-    border-radius: 6px;
-}
+    .research-projects .title::after {
+        content: "What I do";
+        font-family: "Roboto Condensed", sans-serif;
+        bottom: -20px;
+    }
+    .research-projects .text5, p{
+        color: white;
+        font-weight: 500;
+        font-size: 20px;
+        margin: 10px 10px;
+    }
+    .research-projects .research-projects-content .card{
+        width: calc(55% - 150px);
+        text-align: center;
+        padding: 20px 25px;
+        background: #222;
+        cursor: pointer;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+        margin-bottom: 30px;
+    }
+    
+    
+    .research-projects .research-projects-content .card:hover{
+    background: crimson;
+    }
+    
+    .research-projects .research-projects-content .card .box{
+        transition: all 0.3s ease;
+        border-top: 20px solid transparent;;
+    }
+    
+    .research-projects .research-projects-content .card:hover .box{
+        transform: scale(1.05);
+    }
+    
+    .research-projects .research-projects-content .card i{
+        color: crimson;
+        font-size: 40px;
+        margin: 10px 10px;
+        transition: color 0.3s ease;
+    }
+    
+    .research-projects .research-projects-content .card:hover i{
+     color: white;
+    }
+    
+    .research-projects .research-projects-content .card .text5{
+        font-size: 40px;
+        color: white;
+    }
 
-.about .aboutContent .right{
-margin: 30px 0px;
-width: 55%;
-}
-
-.about .aboutContent .right .text4,.about .aboutContent .right p{
-    font-size: 25px;
-    font-weight: 600;
-    margin-bottom: 10px;
-    margin-left: 10px;
-    color: black;
-}
-
-.about .aboutContent .right .text4 span{
-    color: crimson;
-}
-
-.about .aboutContent .right a{
-    font-size: 20px;
-    font-weight: 500;
-    display: inline-block;
-    background-color: crimson;
-    padding: 10px 30px;
-    text-decoration: none;
-    cursor: pointer;
-    color: black;
-    margin-top: 20px;
-    border-radius: 6px;
-    border: 2px solid black;
-    transition: all 0.3s ease;
-}
-
-.about .aboutContent .right a:hover{
-    color: black;
-    background: none
+@media (max-width: 768px) {
+    .research-projects .research-projects-content .card {
+        width: 100%;
+    }
 }
     
 .resume{
@@ -291,7 +304,7 @@ width: 55%;
 }
 
 .jobExperiences  .title::after{
-content: "What my job experiences are  ";
+content: "What my experiences are  ";
 background: black;
 bottom: -20px;
 }
@@ -302,6 +315,7 @@ bottom: -20px;
     font-size: 20px;
     margin: 10px 10px;
 }
+
 .jobExperiences .jobExperiencesContent .card{
     width: calc(55% - 150px);
     text-align: center;
@@ -504,7 +518,7 @@ background: crimson;
 }
 
 .activities  .title::after{
-content: "What I did  ";
+content: "What I am involved in";
 background: black;
 bottom: -20px;
 
