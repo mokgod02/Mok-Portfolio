@@ -23,71 +23,71 @@
     </div>
     
 <!-- Navigation Bar -->
-<nav class="navBar">
-    <div class="maxWidth">
+<nav class="navBar navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <div class="container-fluid">
         <div class="logo"><a href="#">Eric's Portfolio</a></div>
-        <ul class="menu">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#research-projects">Research/Projects</a></li>
-            <li><a href="#jobExperiences"> Experiences</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#activities">Activities</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="menu-btn">
-            <i class="fas fa-bars"></i>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#research-projects">Research/Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#jobExperiences">Experiences</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#activities">Activities</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
         </div>
     </div>
 </nav>
 
+
 <!-- Home Section -->
 <section class="home" id="home">
-    <div class="maxWidth">
-        <div class="mainContent">
-            <div class="text1">Hello, my name is</div>
-            <div class="text2">Eric Min Myat,</div>
-            <div class="text1">a rising junior at Illinois Wesleyan University, </div> <div class="text1"> studying Physics with strong computational skills.</div>
-            <div class="text1"><a href="images/Eric Min Myat_Resume_2024 (1) copy.pdf" class="resume">Download Resume</a>      
-            </div>
-        </div>
+    <div class="maxWidth text-center">
+        <h1>Hello, I'm Eric Min Myat</h1>
+        <h2>A rising junior at Illinois Wesleyan University</h2>
+        <p>Studying Physics with strong computational skills.</p>
+        <a href="images/Eric Min Myat_Resume_2024 (1) copy.pdf" class="btn btn-primary">Download Resume</a>
     </div>
 </section>
+
 
 <!-- About Section -->
 <section class="research-projects" id="research-projects">
     <div class="maxWidth">
-        <h2 class="title">My Research/Projects</h2>
-        <div class="research-projects-content">
-            <div class="card">
-                <div class="box">
-                    <i class="fas fa-microscope"></i>
-                    <div class="text5">Characterization of Phase Transition Behavior in VO2 Thin Films</div>
-                    <p>Illinois Wesleyan University</p>
-                    <p>Spring 2024</p>
-                    <p>Utilized spectroscopic techniques and data analysis methods to study phase transition properties of VO2 thin films.</p>
+        <h2 class="title text-center">My Research/Projects</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <i class="fas fa-microscope"></i>
+                        <h5 class="card-title">Characterization of Phase Transition Behavior in VO2 Thin Films</h5>
+                        <p class="card-text">Utilized spectroscopic techniques to study phase transition properties.</p>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="box">
-                    <i class="fas fa-code"></i>
-                    <div class="text5">Responsive Portfolio Website</div>
-                    <p>Illinois Wesleyan University</p>
-                    <p>Fall 2023</p>
-                    <p>Developed a visually appealing and responsive website showcasing projects using HTML, CSS, Bootstrap, and JavaScript.</p>
-                    <p><a href="https://github.com/mokgod02/Mok-Portfolio.git" target="_blank">View on GitHub</a></p>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <i class="fas fa-code"></i>
+                        <h5 class="card-title">Responsive Portfolio Website</h5>
+                        <p class="card-text">Developed a visually appealing and responsive website showcasing projects.</p>
+                        <a href="https://github.com/mokgod02/Mok-Portfolio.git" target="_blank" class="btn btn-link">View on GitHub</a>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="box">
-                    <i class="fas fa-server"></i>
-                    <div class="text5">Full-Stack Web Application</div>
-                    <p>Illinois Wesleyan University</p>
-                    <p>Fall 2023</p>
-                    <p>Built a web app with user registration, book uploads, and admin features using HTML, CSS, JavaScript, PHP, and MySQL.</p>
-                    <p><a href="https://github.com/mokgod02/Mok-Portfolio.git" target="_blank">View on GitHub</a></p>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <i class="fas fa-server"></i>
+                        <h5 class="card-title">Full-Stack Web Application</h5>
+                        <p class="card-text">Built a web app with user registration and admin features.</p>
+                        <a href="https://github.com/mokgod02/Mok-Portfolio.git" target="_blank" class="btn btn-link">View on GitHub</a>
+                    </div>
                 </div>
             </div>
-        </div>
         </div>
     </div>
 </section>
@@ -146,41 +146,22 @@
 
 
 <!-- Skills section -->
-
-<section class="skills" id="skills">
+<section class="skills" id="skills"></section>
     <div class="maxWidth">
-        <h2 class="title">My Skills</h2>
-        <div class="skillsContent">
-            <div class="column left">
-                <div class="text6">Technical Skills</div>
-                <div class="card">
-                    <div class="box">
-                        <div>Programming Languages</div>
-                        <p>Proficient in Python, C/C++, Java, JavaScript, OCaml, MIPS Assembly, MySQL, PHP, HTML, CSS.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <div>Software Tools</div>
-                        <p>Experienced with Igor Pro, SPSS Statistics, Git, Microsoft Office Suite, openCARP, LabVIEW, and MATLAB.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <div>Lab Skills</div>
-                        <p>Hands-on experience in modern physics and basic electronics, including test & measurement instrumentation such as oscilloscopes.</p>
-                    </div>
-                </div>
+        <h2 class="title text-center">My Skills</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <h5>Technical Skills</h5>
+                <ul>
+                    <li>Programming Languages: Python, C/C++, Java, JavaScript, OCaml, MIPS Assembly</li>
+                    <li>Software Tools: Igor Pro, SPSS Statistics, Git, Microsoft Office Suite</li>
+                    <li>Lab Skills: Modern physics and basic electronics</li>
+                </ul>
             </div>
-            <div class="column left">
-                <div class="text6">Relevant Coursework</div>
-                <div class="card">
-                    <div class="box">
-                        <p>Modern Physics (Relativity, Quantum, Nuclear) | Classical Mechanics, Electricity and Magnetism | Discrete Mathematics |
-                            Data Structures and Algorithms | Computer Architecture</p>
-                        <a href="images/june 2024 transcript.pdf" class="resume">Download Courses</a> 
-                    </div>
-                </div>
+            <div class="col-md-6">
+                <h5>Relevant Coursework</h5>
+                <p>Modern Physics, Classical Mechanics, Electricity and Magnetism, Data Structures, Computer Architecture</p>
+                <a href="images/june 2024 transcript.pdf" class="btn btn-secondary">Download Courses</a>
             </div>
         </div>
     </div>
@@ -300,8 +281,7 @@
                                 </div>
                                 <div class="button">
                                     <button type="submit">Send Message</button>
-                            </div>
-                                       
+                            </div>      
                                     </form>
                                 </div>     
                                 </div>
@@ -310,9 +290,10 @@
 
             <!-- Footer section -->
 
-<footer>
-    <span>Created By<a href="#"> Eric</a> | <span class="far fa-copyright"></span> 2024 All Rights Reserved. </span>
-</footer>
+            <footer class="text-center">
+                <span>Created By <a href="#">Eric</a> | <span class="far fa-copyright"></span> 2024 All Rights Reserved.</span>
+            </footer>
+
 <script src="jaja.js"></script>
     </body>
 </html>
