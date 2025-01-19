@@ -1,890 +1,352 @@
-*{
-    padding: 0;
+/* Global Styles */
+:root {
+    --primary-color: #f4a261; /* Warm Orange */
+    --secondary-color: #264653; /* Deep Teal */
+    --background-color: #fefae0; /* Warm Cream */
+    --text-color: #2a2a2a; /* Soft Black */
+    --hover-color: #e76f51; /* Coral */
+    --light-color: #ffffff; /* White */
+    --font-primary: "Playfair Display", serif;
+    --font-secondary: "Poppins", sans-serif;
+}
+
+* {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
 }
 
-.navBar{
-    font-family: "Roboto Condensed", sans-serif;
-    width: 100%;
+body {
+    font-family: var(--font-secondary);
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+/* Full Page Sections */
+section {
+    height: 100vh; /* Full height of viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    scroll-snap-align: start; /* Snap to section on scroll */
+}
+
+section#home {
+    background-color: var(--light-color);
+}
+
+section#research-projects {
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+    font-family: var(--font-secondary);
+}
+
+section#contact {
+    background-color: #f4f4f4;
+    color: var(--text-color);
+    font-family: var(--font-secondary);}
+
+/* Navigation Bar */
+.navBar {
     position: fixed;
-    padding: 30px 0;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    z-index: 999;
-}
-
-.navBar.sticky{
+    top: 0;
+    width: 100%;
+    background: var(--primary-color);
     padding: 15px 0;
-    background-color: brown;
+    z-index: 1000;
+    transition: 0.3s ease;
+    
 }
 
-.maxWidth{
-max-width: 1300px;
-padding: 0px 80px;
-margin: auto;
+.navBar .maxWidth {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.navBar .menu li a{
-    color: white;
-    margin-left: 25px;
+.navBar .logo {
+    font-family: var(--font-secondary);
+    font-size: 20px;
+    color: var(--light-color);
+    padding: 5px 15px;
+    border: 2px solid var(--text-color);
+    border-radius: 5px;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.navBar .menu {
+    list-style: none;
+    display: flex;
+}
+
+.navBar .menu li {
+    margin: 0 15px;
+}
+
+.navBar .logo {
+    color: var(--text-color);
+}
+
+.navBar .menu li a {
+    color: var(--text-color);
+    font-family: var(--font-secondary);
     font-size: 20px;
     font-weight: 500;
     text-decoration: none;
-    transition: color 0.3s ease;
+    position: relative;
+    padding-bottom: 5px;
+    font-weight: bold;
 }
 
-.navBar .menu li a:hover{
-    color: crimson;
+.navBar .menu li a:hover {
+    color: var(--hover-color);
 }
 
-.navBar .maxWidth{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.navBar .menu li{
-display: inline-block;
-list-style: none;
-}
-
-.navBar .logo a{
-color: white;
-font-size: 35px;
-font-weight: 600;
-text-decoration: none;
-}
-
-.navBar .logo a span{
-    color: crimson;
-}
-
-.navBar.sticky .logo a span{
-    color: black;
-    transition: color 0.3s ease;
-}
-
-.navBar.sticky .menu li a:hover{
-    color: black;
-}
-
-/*menu btn styling*/
-.menu-btn{
-    color: purple;
-    cursor: pointer;
-    font-size: 23px;
-    display: none;
-}
-
-.menu-btn i.active:before{
-    content: "\f00d";
-}
-
-.scroll-up-btn{
+/* Scroll Up Button */
+.scroll-up-btn {
     position: fixed;
-    height: 45px;
-    width: 42px;
-    background: crimson;
-    right: 30px;
     bottom: 10px;
+    right: 30px;
+    height: 45px;
+    width: 45px;
+    background: var(--primary-color);
+    color: var(--light-color);
+    font-size: 20px;
     text-align: center;
     line-height: 45px;
-    color: black ;
-    z-index: 9999;
-    font-size: 30px;
-    border-radius: 6px;
-    border-bottom-width: 2px;
+    border-radius: 50%;
     opacity: 0;
-    cursor: pointer;
     pointer-events: none;
-    transition: all 0.3s ease;
+    transition: 0.3s ease;
 }
-.show{
-    bottom: 30px;
+
+.scroll-up-btn.show {
     opacity: 1;
     pointer-events: auto;
+    bottom: 30px;
 }
 
-.scroll-up-btn:hover{
-    filter: brightness(90%);
+.scroll-up-btn:hover {
+    background: var(--hover-color);
 }
 
-
-/*home section*/
-
-.home{
-    display: flex;
-    background-image: url(images/img6.png);
-    height: 100vh;
-    min-height: 500px;
-    color: white;
-    background-attachment: fixed;
-    background-size: cover;
-    font-family:"Roboto Condensed", sans-serif ;
-}
-
-.home .maxWidth{
-    margin: auto 0 auto 40px;
-}
-
-.home .mainContent .text1{
-font-size: 30px;
-margin-left: 120px;
-}
-
-.home .mainContent .text2{
-    font-size: 70px;
-    margin-left: -3px;
-    font-weight: 600;
-    margin-left: 120px;}
-
-.home .mainContent .text3{
-    font-size: 30px;
-    margin: 5px 0;
-}
-
-
-.home .mainContent .text3 span{
-    color: crimson;
-    font-weight: 600;
-}
-
-.home .mainContent a{
-    font-size: 25px;
-    display: inline-block;
-    background-color: crimson;
-    padding: 12px 36px;
-    text-decoration: none;
-    cursor: pointer;
-    color: black;
-    margin-top: 20px;
-    border-radius: 6px;
-    border: 2px solid black;
-    transition: all 0.3s ease;
-}
-
-.home .mainContent a:hover{
- color: black;
- background: none;
-}
-
-/*section style, all same*/
-.research-projects, .jobExperiences, .skills, .activities, .contact, footer{
-    font-family:"Roboto Condensed", sans-serif ;
-}
-
-section{
-    padding: 100px 0;
-}
-
-section .title{
-    font-family:"Roboto Condensed", sans-serif ;
-    position: relative;
-    margin-bottom: 60px;
-    font-size: 40px;
-    padding-bottom: 20px;
+/* Home Section */
+.home {
     text-align: center;
-    font-weight: 500;
 }
 
-section .title::before{
-    content: "";
-    position: absolute;
-    bottom: 0px;
-    left: 50%;
-    height: 3px;
-    width: 180px;
-    transform: translateX(-50%);
-    background: black;
+.home .profile-container-two {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-section .title::after{
-    position: absolute;
-    bottom: -12px;
-    left: 50%;  
-    font-size: 20px;
-    padding: 5px;
-    background: white;
-    color: crimson;
-    transform: translateX(-50%);
+.home .profile-container {
+    width: 350px;
+    height: 400px;
+    margin-bottom: 40px;
+    border: 5px solid var(--secondary-color);
+    border-radius: 50%;
+    overflow: hidden;
 }
 
+.home .profile-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+}
 
+.home h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-family: var(--font-secondary);
+    padding: 50px 400px;
+}
 
-/* Research and Projects Section */
+.home a {
+    background: var(--primary-color);
+    color: var(--light-color);
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-size: 18px;
+    text-decoration: none;
+    font-family: var(--font-secondary);
+}
 
-.research-projects .research-projects-content, .jobExperiences .jobExperiencesContent, .skills .skillsContent, .activities .activitiesContent, .contact .contactContent{
+.home a:hover {
+    background: var(--hover-color);
+}
+
+/* Research Section */
+.research-projects {
+    text-align: center;
+}
+
+.research-projects .title {
+    font-size: 40px;
+    font-family: var(--font-secondary);
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.research-projects .row {
     display: flex;
     flex-wrap: wrap;
-    align-items:center;
-    justify-content: space-between;
-    }
-
-    .research-projects .title::before{
-        background: crimson; 
-        width: 480px;
-        bottom: -9px;
-    }
-
-    .research-projects .title::after {
-        content: "What I do";
-        font-family: "Roboto Condensed", sans-serif;
-        bottom: -20px;
-    }
-    .research-projects .text5, p{
-        color: white;
-        font-weight: 500;
-        font-size: 20px;
-        margin: 10px 10px;
-    }
-    .research-projects .research-projects-content .card{
-        width: calc(55% - 150px);
-        text-align: center;
-        padding: 20px 25px;
-        background: #222;
-        cursor: pointer;
-        border-radius: 6px;
-        transition: all 0.3s ease;
-        margin-bottom: 30px;
-    }
-    
-    
-    .research-projects .research-projects-content .card:hover{
-    background: crimson;
-    }
-    
-    .research-projects .research-projects-content .card .box{
-        transition: all 0.3s ease;
-        border-top: 20px solid transparent;;
-    }
-    
-    .research-projects .research-projects-content .card:hover .box{
-        transform: scale(1.05);
-    }
-    
-    .research-projects .research-projects-content .card i{
-        color: crimson;
-        font-size: 40px;
-        margin: 10px 10px;
-        transition: color 0.3s ease;
-    }
-    
-    .research-projects .research-projects-content .card:hover i{
-     color: white;
-    }
-    
-    .research-projects .research-projects-content .card .text5{
-        font-size: 40px;
-        color: white;
-    }
-
-@media (max-width: 768px) {
-    .research-projects .research-projects-content .card {
-        width: 100%;
-    }
-}
-    
-.resume{
-    text-decoration: none;
+    gap: 20px;
+    justify-content: center;
 }
 
-/*experiences*/
-
-.jobExperiences{
-    background: black;
-    color: white;
-}
-
-.jobExperiences  .title::before{
-    background: white; 
-    width: 480px;
-    bottom: -9px;
-}
-
-.jobExperiences  .title::after{
-content: "What my experiences are  ";
-background: black;
-bottom: -20px;
-}
-
-.jobExperiences .text5, p{
-    color: white;
-    font-weight: 500;
-    font-size: 20px;
-    margin: 10px 10px;
-}
-
-.jobExperiences .jobExperiencesContent .card{
-    width: calc(55% - 150px);
+.research-projects .card {
+    width: 250px;
+    height: 300px;
+    background: var(--primary-color);
+    border-radius: 10px;
+    color: var(--light-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 20px 25px;
-    background: #222;
-    cursor: pointer;
-    border-radius: 6px;
-    transition: all 0.3s ease;
-    margin-bottom: 30px;
+    padding: 20px;
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
-
-.jobExperiences .jobExperiencesContent .card:hover{
-background: crimson;
+.research-projects .card:hover {
+    transform: translateY(-10px);
+    background: var(--hover-color);
 }
 
-.jobExperiences .jobExperiencesContent .card .box{
-    transition: all 0.3s ease;
-    border-top: 20px solid transparent;;
-}
-
-.jobExperiences .jobExperiencesContent .card:hover .box{
-    transform: scale(1.05);
-}
-
-.jobExperiences .jobExperiencesContent .card i{
-    color: crimson;
-    font-size: 40px;
-    margin: 10px 10px;
-    transition: color 0.3s ease;
-}
-
-.jobExperiences .jobExperiencesContent .card:hover i{
- color: white;
-}
-
-.jobExperiences .jobExperiencesContent .card .text5{
-    font-size: 40px;
-    color: white;
-}
-
-/*skills style*/
-.skills .skillsContent .left .text6{
-    font-size: 35px;
-    font-weight: 500;
-    margin-bottom: 10px;
-}
-.skills .skillsContent .left div {
-    font-size: 30px;
-    font-weight: 500;
-    margin: 25px;
-}
-.skills .skillsContent .left p{
+.research-projects .card .front h3{
     font-size: 23px;
-    font-weight: 500;
-    color: #222;
-    text-align: justify;
-    margin: 25px;
 }
 
-.skills .skillsContent .left span{
-    margin: 10px;
-    text-align: center;
- 
+.research-projects .card .front p{
+    font-size: 18px;
 }
 
-.skills .title::after{
-    content: "What I know and what I have";
-    bottom: -25px;
-
-}
-.skills  .title::before{
-    background: black; 
-    width: 480px;
-    bottom: -10px;
-}
-
-.skills .skillsContent .column{
-    width: 100%;
-}
-
-.skills .skillsContent .bars{
-    margin: 20px;
-}
- 
-.skills .skillsContent .info{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 10px auto;
-}
-
-.skills .skillsContent .info .language{
-    font-size: 80px;
-}
-.skills .skillsContent a{
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-    font-weight: 500;
-    display: inline-block;
-    background-color: white;
-    padding: 6px 15px;
-    text-decoration: none;
-    cursor: pointer;
-    color: black;
-    margin-top: 5px;
-    border-radius: 6px;
-    border: 2px solid black;
-    transition: all 0.3s ease;
-}
-
-.skills .skillsContent a:hover{
-    color: black;
-    background: white;
-}
-
-.skills .skillsContent .left .line{
-    height: 5px;
-    width: 100%;
-    background: white;
-    position: relative;
-}
-
-.skills .skillsContent .left .html::before{
-content: "";
-position: absolute;
-height: 100%;
-width: 80%;
-left: 0;
-top: 0;
-background: black;
-}
-
-.skills .skillsContent .left .css::before {
-    content: "";
+.research-projects .card .front,
+.research-projects .card .back {
     position: absolute;
-    height: 100%;
-    width: 75%;
-    left: 0;
     top: 0;
-    background: black;
-}
-
-.skills .skillsContent .left .jss::before{
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 65%;
     left: 0;
-    top: 0;
-    background: black;
-}
-
-.skills .skillsContent .card{
-    width: 100%;    
-    padding: 20px 25px;
-    background: darkgray;
-    cursor: pointer;
-    border-radius: 6px;
-    transition: all 0.3s ease;
-}
-
-.skills .skillsContent .card:hover{
-background: crimson;
-}
-
-.skills .skillsContent .card .box{
-    transition: all 0.3s ease;
-}
-
-.skills .skillsContent .card:hover .box{
-    transform: scale(1.05);
-}
-
-.skills .skillsContent .card i{
-    color: crimson;
-    font-size: 40px;
-    margin: 10px 10px;
-    transition: color 0.3s ease;
-}
-
-.skills .skillsContent .card:hover i{
- color: white;
-}
-
-/*activites style*/
-.activities{
-    background: black;
-}
-
-.activities .title{
-    color: white;
-}
-
-.activities  .title::before{
-    background: white;
-    width: 480px;
-    bottom: -9px;
-}
-
-.activities  .title::after{
-content: "What I am involved in";
-background: black;
-bottom: -20px;
-
-}
-
-.activities .text7, .activities p, .activities span{
-    color: white;
-    font-weight: 500;
-    font-size: 20px;
-    margin: 10px 10px;
-}
-.activities .activitiesContent .card{
-    width: calc(55% - 100px);
-    text-align: center;
-    padding: 20px 25px;
-    background: #222;
-    cursor: pointer;
-    border-radius: 6px;
-    transition: all 0.3s ease;
-    margin-bottom: 20px;
-}
-
-.activities .activitiesContent .card:hover{
-background: crimson;
-}
-
-.activities .activitiesContent .card .box{
-    transition: all 0.3s ease;
-}
-
-.activities .activitiesContent .card:hover .box{
-    transform: scale(1.05);
-}
-
-.activities .activitiesContent .card i{
-    color: crimson;
-    font-size: 40px;
-    margin: 10px 10px;
-    transition: color 0.3s ease;
-}
-
-.activities .activitiesContent .card:hover i{
- color: white;
-}
-
-.activities .activitiesContent .card .text5{
-    font-size: 40px;
-    color: white;
-}
-.activities .activitiesContent a{
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: 500;
-    display: inline-block;
-    background-color: white;
-    padding: 2px 8px;
-    text-decoration: none;
-    cursor: pointer;
-    color: black;
-    margin-top: 5px;
-    border-radius: 6px;
-    border: 2px solid black;
-    transition: all 0.3s ease;
-}
-
-/*contact*/
-
-.contact .title::after{
-    content: "Get in touch"
-} 
-.contact .contactContent .column{
-    width: calc(50% - 50px);
-}
-.contact .contactContent .left p{
-    color: crimson;
-    font-size: 20px;
-    font-weight: 600;
-    text-align: justify;
-}
-.contact .contactContent .left .icons{
-    margin: 10px 0;
-}
-.contact .contactContent .row{
-    display:flex;
-    align-items: center;
-}
-.contact .contactContent .row .info{
-    margin: 15px auto;
-}
-.contact .contactContent .row i{
-    font-size: 20px;
-    color: crimson;
-}
-.contact .contactContent .text8{
-    color: black;
-    font-size: 20px;
-    font-weight: 600;
-}
-.contact .contactContent .head {
-    color: grey;
-    font-size: 20px;
-    font-weight: 600;
-}
-.contact .contactContent .subtitle{
-    color: black;
-    font-size: 20px;
-}
-.contact .contactContent .info .social{
-    color: grey;
-    font-size: 20px;
-    font-weight: 600;
-}
-.contact .contactContent .info a{
-    text-decoration: none;
-    
-}
-.contact .contactContent .info i{
-    font-size: 20px;
-    color: crimson;
-    margin: 15px auto;
-}
-
-.contact .right form .fields{
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
     display: flex;
-}
-
-.contact .right form .field, .contact .right form .fields .field{
-    height: 45px;
-    width: 100%;
-    margin-bottom: 20px;
-}
-.contact .right form .name{
-    margin-right: 10px;
-}
-.contact .right form .email{
-    margin-left: 10px;
-}
-.contact .right form .textArea{
-    height: 80px;
-    width: 100%;
-}
-.contact .right form .field input, .contact .right form .textArea textarea{
-    height: 100%;
-    width: 100%;
-    border-radius: 6px;
-    outline: 0px;
-    border: 1px solid lightgrey;
-    padding: 0px 15px;
-    font: 17px;
-}
-.contact .right form .textArea textarea{
-    padding-top: 10px;
-    resize: none;
-}
-.contact .right form .button{
-height: 47px;
-width: 170px;
-}
-.contact .right form .button button{
-height: 100%;
-width: 100%;
-border: 2px solid black;
-background:crimson ;
-color: white;
-border-radius: 6px;
-font-weight: 500;
-cursor: pointer;
-transition: all 0.3s ease;
-}
-
-.contact .right form .button button:hover{
-    color: crimson;
-    background: none;
-}
-
-/* footer style*/
-
-footer{
-    background: black;
-    color: white;
-    padding: 20px 25px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: var(--light-color);
     text-align: center;
-    font-size: 30px;
-    font-weight: 500;
+    transition: transform 0.6s ease;
+    text-decoration: none;
+    font-family: var(--font-secondary);
 }
 
-footer span a{
-    color :crimson;
+.research-projects .card .front {
+    background: var(--primary-color);
+    z-index: 2;
+}
+
+.research-projects .card .back {
+    background: var(--hover-color);
+    transform: rotateY(180deg);
+}
+
+.research-projects .card:hover .front {
+    transform: rotateY(-180deg);
+}
+
+.research-projects .card:hover .back {
+    transform: rotateY(0);
+}
+
+.research-projects ul {
+    list-style: none;
+    padding: 0;
+    font-size: 20px;
+    text-align: left;
+}
+
+/* Contact Section */
+.contact {
+    /* text-align: center; */
+}
+
+.contact .icons{
+    /* text-align: center; */
+    font-size: 18px;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 20px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact button {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+    background-color: var(--hover-color);
+}
+
+.contact .row {
+    margin: 30px;
+}
+
+/* Footer */
+footer {
+    background: var(--secondary-color);
+    color: var(--light-color);
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: var(--primary-color);
     text-decoration: none;
 }
 
-footer span a:hover{
-    color :crimson;
-text-decoration: underline;
+footer a:hover {
+    color: var(--hover-color);
 }
 
-/*responsive*/
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navBar .menu {
+        flex-direction: column;
+    }
 
-@media(max-width: 1104px){
-    .about .aboutContent .left img{
-        height: 100%;
+    .research-projects .card {
         width: 100%;
-      
-    }    
- }
-@media(max-width: 991px){
-    .maxWidth{
-        padding: 0px 50px;
     }
 }
-@media(max-width: 947px){
-    .maxWidth{
-        padding: 0px 50px;
-        }
-    .menu-btn{
-         display: block;
-         z-index: 999;
-        }
-        
-    .navBar .menu{
-        position: fixed;
-        height: 100vh;
-        width: 100%;
-        left: -100%;
-        top: 0;
-        background: black;
-        text-align: center;
-        padding-top: 80px;
-        transition: all 0.3s ease;
-        }
-
-    .navBar .menu.active{
-        left: 0;
-    }
-    .navBar .menu li{
-        display: block;
-    }
-    .navBar .menu li a{
-        display: inline-block;
-        margin: 20px 0;
-        font-size: 25px;
-        color: purple;
-    }
-    .home .mainContent .text2{
-        font-size: 60px;
-    }
-
-    .home .mainContent .text3{
-        font-size: 32px;
-    }
-    .home .mainContent a{
-        font-size: 23px;
-        padding: 10px 30px ;
-    }
-    .maxWidth{
-        max-width: 800px;
-        }
-    .about .aboutContent .column{
-        width: 100%;
-    }
-    .about .aboutContent .left{
-        display: flex;
-        justify-content: center;
-        margin: 0 auto 60px ;
-    }
-    .about .aboutContent .right{
-        flex: 100%;
-    }
-    .jobExperiences .jobExperiencesContent .card, .activities .activitiesContent .card{
-        margin-bottom: 20px;
-        width: calc(50% - 10px);      
-    }
-    .skills .skillsContent .column, .contact .contactContent .column, .activities .activitiesContent .column{
-        width: 100%;
-        margin-bottom: 35px;
-    }
-    
-.jobExperiences .title::after{
-    content: "what my job experiences are  ";
-    background: black;
-    bottom: -48px;
-    }
-
-    .jobExperiences .title::before{
-        background: white; 
-        width: 400px;
-        bottom: -9px;
-    }
-    .skills .title::after{
-        content: "what I know and what I have";
-        bottom: -20px;
-    
-    }
-    .skills  .title::before{
-        background: black; 
-        width: 480px;
-        bottom: -10px;
-    }
-   
-}
-
-@media(max-width: 690px){
-    .home .mainContent .text2{
-        font-size: 50px;
-    }
-
-    .home .mainContent .text3{
-        font-size: 27px;
-    }
-    .home .mainContent a{
-        font-size: 20px;
-        padding: 8px 20px ;
-    }
-    .jobExperiences .jobExperiencesContent .card{
-        width: 100%     
-    }
-    .skills .title::after{
-        content: "what I know and what I have";
-        bottom: -20px;
-        
-    }
-    .skills  .title::before{
-        background: black; 
-        width: 480px;
-        bottom: -10px;
-    }
-    .skills .skillsContent .card{
-        width: 100%     
-    }
-
-}
-
-@media(max-width: 654px){
-    .home .mainContent .text2{
-        font-size: 40px;
-    }
-
-    .home .mainContent .text3{
-        font-size: 22px;
-    }
-    .skills .title::after{
-        content: "what I know and what I have";
-        bottom: -50px;
-        
-    }
-    .skills  .title::before{
-        background: black; 
-        width: 480px;
-        bottom: -10px;
-    }
-    .skills .skillsContent .info p{
-        font-size: 22px;
-        font-weight: 500;
-        color: #222;
-        margin: 25px;
-    }
-    
-    .skills .skillsContent .left .info span{
-        margin: 10px;
-        bottom: 100px;
-    }
-    .skills .skillsContent .left .info a{
-        padding: 3px 10px;
-        font-size: 16px;
-    }
-    .skills .skillsContent .card{
-        width: 100%     
-    }
-    }

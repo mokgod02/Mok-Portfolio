@@ -1,299 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-<!-- Metadata -->
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial0-scale=1.0">
-<title>Eric Portfolio</title>
-<link rel="stylesheet"  href="style.css">
-<script src="https://kit.fontawesome.com/a8f61166b9.js" crossorigin="anonymous"></script>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css2?family=David+Libre&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<script  src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    </head>
-    <body>
 
-        <!-- Scroll Up Button -->
-        <div class="scroll-up-btn">
-            <i class="fas fa-angle-up"></i>
+<head>
+    <!-- Metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eric Portfolio</title>
+
+    <!-- Stylesheets and Fonts -->
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a8f61166b9.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <!-- Scroll Up Button -->
+    <div class="scroll-up-btn">
+        <i class="fas fa-angle-up"></i>
     </div>
-    
-<!-- Navigation Bar -->
-<nav class="navBar navbar navbar-expand-lg navbar-light bg-light sticky-top">
-    <div class="container-fluid">
-        <div class="logo"><a href="#">Eric's Portfolio</a></div>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#research-projects">Research/Projects</a></li>
-                <li class="nav-item"><a class="nav-link" href="#jobExperiences">Experiences</a></li>
-                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                <li class="nav-item"><a class="nav-link" href="#activities">Activities</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+
+    <!-- Navigation Bar -->
+    <nav class="navBar">
+        <div class="maxWidth">
+            <a class="logo" href="#">STMM</a>
+            <ul class="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#research-projects">Work/Research</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
-    </div>
-</nav>
+    </nav>
 
+    <!-- Home Section -->
+    <section id="home" class="home">
+        <div class="maxWidth">
+            <div class="profile-container-two">
+            <div class="profile-container">
+                <img src="images/img1.jpg" alt="Profile Picture" class="profile-pic" />
+            </div>
+        </div>
+            <h1>Hello, my name is Si Thu Min Myat. I am a junior at Illinois Wesleyan University studying Physics . Please feel free to check out what I do.</h1>
+            <a href="images/Min Myat_Si Thu_Resume.pdf" class="btn btn-primary">Download Resume</a>
+        </div>
+    </section>
 
-<!-- Home Section -->
-<section class="home" id="home">
-    <div class="maxWidth text-center">
-        <h1>Hello, I'm Eric Min Myat</h1>
-        <h2>A rising junior at Illinois Wesleyan University</h2>
-        <p>Studying Physics with strong computational skills.</p>
-        <a href="images/Eric Min Myat_Resume_2024 (1) copy.pdf" class="btn btn-primary">Download Resume</a>
-    </div>
-</section>
+    <!-- Work/Research Section -->
+    <section id="research-projects" class="research-projects">
+        <div class="maxWidth">
+            <h2 class="title text-center">Work/Research</h2>
+            <div class="row justify-content-center">
+                <!-- Card Template -->
+                <div class="card">
+                    <div class="front">
+                        <h3>Characterization of Phase Transition Behavior in VO2 Thin Films </h3>
+                        <p>Illinois Wesleyan University</p>
+                    </div>
+                    <div class="back">
+                        <p>Spring 2024 - Ongoing</p>
+                        <p>Studied phase transition behavior using spectroscopic techniques to understand material properties.</p>
+                        <a href="images/sminmyat_JWP (3).pdf" class="btn btn-primary">Download Presentation</a>
+                    </div>
+                </div>
 
+                <div class="card">
+                    <div class="front">
+                        <h3>AI-Driven Character Network & Chatbot Development  </h3>
+                    </div>
+                    <div class="back">
+                        <p>Fall 2024 - Ongoing</p>
+                        <p>Building a Python-based AI chatbot using Scrapy for data collection, with NLP and transformer models to analyze character traits and enable dynamic, theme-driven conversations.</p>
+                        <a href="https://github.com/mokgod02/Naruto" target="_blank" class="btn btn-primary">GitHub</a>
+                    </div>
+                </div>
 
-<!-- About Section -->
-<section class="research-projects" id="research-projects">
-    <div class="maxWidth">
-        <h2 class="title text-center">My Research/Projects</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <i class="fas fa-microscope"></i>
-                        <h5 class="card-title">Characterization of Phase Transition Behavior in VO2 Thin Films</h5>
-                        <p class="card-text">Utilized spectroscopic techniques to study phase transition properties.</p>
+                <div class="card">
+                    <div class="front">
+                        <h3>Pediatric Summer Research Program (PSRP)</h3>
+                        <p>Washington University School of Medicine</p>
+                    </div>
+                    <div class="back">
+                        <p>June 2024 - July 2024</p>
+                        <p>Analyzed pediatric survey data using SPSS and Python to compute coping factor ratios. Simulated cardiac activity by manually drawing Purkinje fibers using openCARP software.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="front">
+                        <h3>Portfolio Website</h3>
+                    </div>
+                    <div class="back">
+                        <p>Fall 2023</p>
+                        <p>Designed and developed a visually appealing website to showcase projects and achievements.</p>
+                        <a href="https://github.com/mokgod02/Mok-Portfolio" target="_blank" class="btn btn-primary">GitHub</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="front">
+                        <h3>Full-Stack App</h3>
+                    </div>
+                    <div class="back">
+                        <p>Fall 2023</p>
+                        <p>Built a web application with features like user registration, authentication, and admin dashboards.</p>
+                        <a href="https://github.com/mokgod02/Mooks" target="_blank" class="btn btn-primary">GitHub</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="front">
+                        <h3>IT Help Desk</h3>
+                        <p>Illinois Wesleyan University</p>
+                    </div>
+                    <div class="back">
+                        <p>August 2022 - December 2023</p>
+                        <p>Resolved technical issues for instructors and students. Managed ticketing systems for resolutions.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="front">
+                        <h3>Direct Support Professional</h3>
+                        <p>Lifelong Access</p>
+                    </div>
+                    <div class="back">
+                        <p>January 2025 - Ongoing</p>
+                        <p>Provided direct support to individuals with IDD, assisting with daily activities and personal care to promote independence and well-being.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="front">
+                        <h3>AI Trainer</h3>
+                        <p>Outlier AI</p>
+                    </div>
+                    <div class="back">
+                        <p>September 2024 - Ongoing</p>
+                        <p>Trained AI models by rating and ranking responses for quality and contributing to multi-modal tasks for text, image, and audio generation and classification.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="front">
+                        <h3>Resident Advisor</h3>
+                        <p>Illinois Wesleyan University</p>
+                    </div>
+                    <div class="back">
+                        <p>August 2023 - December 2024</p>
+                        <p>Organized activities and seminars, fostering inclusive community living and well-being.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <i class="fas fa-code"></i>
-                        <h5 class="card-title">Responsive Portfolio Website</h5>
-                        <p class="card-text">Developed a visually appealing and responsive website showcasing projects.</p>
-                        <a href="https://github.com/mokgod02/Mok-Portfolio.git" target="_blank" class="btn btn-link">View on GitHub</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <i class="fas fa-server"></i>
-                        <h5 class="card-title">Full-Stack Web Application</h5>
-                        <p class="card-text">Built a web app with user registration and admin features.</p>
-                        <a href="https://github.com/mokgod02/Mok-Portfolio.git" target="_blank" class="btn btn-link">View on GitHub</a>
-                    </div>
-                </div>
-            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- JobExperiences section -->
-<section class="jobExperiences" id="jobExperiences">
-    <div class="maxWidth">
-        <h2 class="title">My Experiences</h2>
-        <div class="jobExperiencesContent">
-            <div class="card">
-                <div class="box">
-                    <i class="fas fa-microscope"></i>
-                    <div class="text5">Pediatric Summer Research Program (PSRP)</div>
-                    <p>Washington University School of Medicine, St. Louis</p>
-                    <p>June 2024 - July 2024</p>
-                    <ul>
-                        <li>Conducted research at the Silva Lab to create 3D models of Purkinje fibers in the heart for simulating and visualizing their behavior in cardiac electrophysiology.</li>
-                        <li>Performed data analysis using Python, Excel, and SPSS Statistics for survey projects, co-authoring one.</li>
-                        <li>Shadowing experience in NICU, Surgery, and Hospitalist departments.</li>
-                    </ul>
-                    </ul>
-                </div>
-            </div>
-            <div class="card">
-                <div class="box">
-                    <i class="fas fa-microchip"></i>
-                    <div class="text5">IT Help Desk</div>
-                    <p>Illinois Wesleyan University</p>
-                    <p>August 2022 – December 2023</p>
-                    <p>Identified and fixed typical problems for instructors and students, and managed the ticketing system for timely issue resolution.</p>
-                </div> <!-- Missing closing div added -->
-            </div>
-
-            <div class="card">
-                <div class="box">
-                    <i class="fas fa-person"></i>
-                    <div class="text5">Resident Advisor</div>
-                    <p>Illinois Wesleyan University</p>
-                    <p>August 2023 – Now</p>
-                    <p>Planned activities and seminars to promote inclusive living, catered to resident requirements, and improved overall well-being.</p>
-                </div> <!-- Missing closing div added -->
-            </div>
-
-            <div class="card">
-                <div class="box">
-                    <i class="fas fa-seedling"></i>
-                    <div class="text5">Peace Garden Management Internship</div>
-                    <p>Illinois Wesleyan University</p>
-                    <p>May 2023 - September 2023</p>
-                    <p>Managed community garden operations, including cultivation, market organization, and produce distribution to local nonprofits, enhancing skills in sustainability and community development.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<!-- Skills section -->
-<section class="skills" id="skills"></section>
-    <div class="maxWidth">
-        <h2 class="title text-center">My Skills</h2>
-        <div class="row">
-            <div class="col-md-6">
-                <h5>Technical Skills</h5>
-                <ul>
-                    <li>Programming Languages: Python, C/C++, Java, JavaScript, OCaml, MIPS Assembly</li>
-                    <li>Software Tools: Igor Pro, SPSS Statistics, Git, Microsoft Office Suite</li>
-                    <li>Lab Skills: Modern physics and basic electronics</li>
-                </ul>
-            </div>
-            <div class="col-md-6">
-                <h5>Relevant Coursework</h5>
-                <p>Modern Physics, Classical Mechanics, Electricity and Magnetism, Data Structures, Computer Architecture</p>
-                <a href="images/june 2024 transcript.pdf" class="btn btn-secondary">Download Courses</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-
- 
-<!-- Activities section -->
-
-<section class="activities" id="activities">
-    <div class="maxWidth">
-        <h2 class="title">Activities</h2>
-        <div class="activitiesContent">
-            <div class="card">
-                <div class="box">
-                    <i class="fas fa-users"></i>
-                    <div class="text7">Involvement</div>
-                    <ul class="text7">
-                        <li>Vice President, IWU Biking Club</li>
-                        <li>Treasurer, Association for Computing Machinery (ACM)
-                        <li>Member, Society of Physics Students (SPS)</li>
-                        <li>Member, Institute of Electrical and Electronics Engineers (IEEE)</li>
-                        <li>Member, International Society of Optics and Photonics (SPIE)</li>
-                        <li>Member, Association for Computing Machinery (ACM)</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="card">
-                <div class="box">
-                    <i class="fas fa-award"></i>
-                    <div class="text7">Awards</div>
-                    <ul class="text7">
-                        <li> Courageous Leader Scholarship, Recipient </li>
-                        <li>Cargo Fellowship Peace Garden, Recipient</li>
-                        <li>Generation Google Scholarship (North America), Recipient</li>
-                    </ul>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-                     <!-- Contact section -->
-                    <section class="contact" id="contact">
-                        <div class="maxWidth">
-                            <h2 class="title">About Me</h2>
-                            <div class="contactContent">
-                                <div class="column left">
-                                    <div class="text8">Contact Me</div>
-                                    <p>Want to know more about me? You can contact me by email or by other social media if you have any questions.</p>
-                                    <div class="icons">
-                                        <div class="row">
-                                            <i class="fas fa-user"></i>
-                                            <div class="info">
-                                                <div class="head">Name</div>
-                                                <div class="subtitle">Eric Min Myat</div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <i class="fas fa-envelope"></i>
-                                            <div class="info">
-                                                <div class="head">Email</div>
-                                                <div class="subtitle">sithuminmyat630@gmail.com</div>
-                                            </div>
-                                            <div class="info">
-                                                <div class="head">Secondary Email</div>
-                                                <div class="subtitle">sminmyat@iwu.edu</div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <i class="fas fa-map-marker-alt"></i>
-                                            <div class="info">
-                                                <div class="head">Address</div>
-                                                <div class="subtitle">Bloomington, Illinois</div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <i class="fas fa-phone-alt"></i>
-                                            <div class="info">
-                                                <div class="head">Phone Number</div>
-                                                <div class="subtitle">+18576931159</div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <i class="fas fa-hashtag"></i>
-                                            <div class="info">
-                                                <div class="head">Social Media</div>
-                                                <i class="fab fa-facebook"></i>
-                                                <div class="social">Facebook</div>
-                                                <a href="https://www.facebook.com/profile.php?id=100002307568890"><span class="subtitle">Si Thu Min Myat ( <-- Click Here To Continue to Profile )</span></a>
-                                                <div><i class="fab fa-instagram"></i></div>
-                                                <div class="social">Instagram</div>
-                                                <a href="https://www.instagram.com/eric.minmyat/"><span class="subtitle">@eric.minmyat ( <-- Click Here To Continue To Profile )</span></a>
-                                                <div><i class="fab fa-whatsapp"></i></div>
-                                                <div class="social">Whatsapp</div>
-                                                <span class="subtitle">+18576931159</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>    
-                                <div class="column right">
-                                    <div class="text9">Message Me</div>
-                                    <form action="#">
-                                        <div class="fields">
-                                            <div class="field name">
-                                                <input type="text" placeholder="Name" required>
-                                            </div>
-                                                <div class="field email">
-                                                <input type="email" placeholder="Email" required>
-                                        </div>
-                                    </div>
-                                        <div class="field">
-                                            <input type="text" placeholder="Subject" required>
-                                    </div>
-                                    <div class="field textArea">
-                                        <textarea cols="30" rows="10" placeholder="Message" required></textarea>
-                                </div>
-                                <div class="button">
-                                    <button type="submit">Send Message</button>
-                            </div>      
-                                    </form>
-                                </div>     
-                                </div>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="maxWidth">
+            <div class="contactContent row">
+                <div class="column col-md-6">
+                    <h3>Contact Me</h3>
+                    <div class="icons">
+                        <div class="row">
+                            <i class="fas fa-user"></i>
+                            <div class="info">
+                                <div class="head">Name</div>
+                                <div class="subtitle">Eric Min Myat</div>
                             </div>
-                    </section>
+                        </div>
+                        <div class="row">
+                            <i class="fas fa-envelope"></i>
+                            <div class="info">
+                                <div class="head">Email</div>
+                                <div class="subtitle">sithuminmyat630@gmail.com</div>
+                                <div class="subtitle">sminmyat@iwu.edu</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="info">
+                                <div class="head">Address</div>
+                                <div class="subtitle">Bloomington, Illinois</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fas fa-phone-alt"></i>
+                            <div class="info">
+                                <div class="head">Phone Number</div>
+                                <div class="subtitle">+18576931159</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column col-md-6">
+                    <h3>Message Me</h3>
+                    <form action="#">
+                        <div class="mb-3">
+                            <input type="text" placeholder="Name" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" placeholder="Email" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" placeholder="Subject" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea cols="30" rows="5" placeholder="Message" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <!-- Footer section -->
+    <!-- Footer -->
+    <footer class="text-center py-3">
+        <span>Created By <a href="#">Eric</a> | <span class="far fa-copyright"></span> 2024 All Rights Reserved.</span>
+    </footer>
 
-            <footer class="text-center">
-                <span>Created By <a href="#">Eric</a> | <span class="far fa-copyright"></span> 2024 All Rights Reserved.</span>
-            </footer>
+    <!-- External Script -->
+    <script src="jaja.js"></script>
+</body>
 
-<script src="jaja.js"></script>
-    </body>
 </html>
